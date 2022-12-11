@@ -1,4 +1,4 @@
-/* général */
+/* Général */
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
@@ -15,7 +15,6 @@ a {
     color: black;
 }
 
-
 h2 {
     font-size: 22px;
     font-weight: bold;
@@ -29,7 +28,6 @@ h3 {
 main {
     margin: 0 20px;
 }
-
 
 /* Header */
 header {
@@ -47,26 +45,28 @@ header .logo img {
     width: 6%;
 }
 
+/* La navigation */
 nav .listNavigation {
     padding: 0;
+    margin: 0;
     list-style: none;
     display: flex;
     flex-direction: row;
 }
 
+.listNavigation li a {
+    display: inline-block;
+    padding: 30px 40px;
+}
+
 .listNavigation li a:hover {
     color: #0065FC;
     border-top: 2px #0065FC solid;
-    padding-top: 20px;
-    cursor: default;
+    padding-top: 28px;
+    cursor: pointer;
 }
 
-.listNavigation li {
-    display: inline-block;
-    padding: 6px;
-}
-
-/* section recherches */
+/* Section recherches */
 #search {
     margin-top: 20px;
 }
@@ -75,7 +75,7 @@ nav .listNavigation {
     margin: 0;
 }
 
-/* barre de recherche */
+/* Barre de recherche */
 #search form {
     display: flex;
     margin: 15px 0;
@@ -110,7 +110,7 @@ nav .listNavigation {
     font-weight: bold;
 }
 
-#search form .searchText::placeholder{
+#search form .searchText::placeholder {
     color: black;
 }
 
@@ -118,7 +118,7 @@ nav .listNavigation {
     display: none;
 }
 
-/* filtres recherches */
+/* Filtres de recherche */
 #search .filtersSection {
     display: flex;
     flex-direction: row;
@@ -153,6 +153,7 @@ nav .listNavigation {
 #search .filtersSection .filters .filterButton:hover {
     background-color: #deebff;
     border: 2px solid #f2f2f2;
+    cursor: pointer;
 }
 
 #search .filtersSection .filters .filterButton i {
@@ -161,7 +162,7 @@ nav .listNavigation {
     margin: 0 10px 0 0;
 }
 
-/* ligne info */
+/* Ligne info */
 #search .info {
     display: flex;
     flex-direction: row;
@@ -188,7 +189,7 @@ nav .listNavigation {
     color: #0065FC;
 }
 
-/* section hotels */
+/* Section hotels */
 .searchHotels {
     display: flex;
     flex-direction: row;
@@ -197,14 +198,13 @@ nav .listNavigation {
     gap: 3%;
 }
 
-/* Hébergements  */
+/* Hébergements à Marseille  */
 .searchHotels .hotels {
     background-color: #f2f2f2;
     width: 60%;
     border-radius: 20px;
     padding: 10px 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
 }
 
 .searchHotels .hotels #row {
@@ -265,7 +265,7 @@ nav .listNavigation {
     line-height: 120px;
 }
 
-/* les plus populaires */
+/* Les plus populaires */
 .searchHotels .popular {
     background-color: #f2f2f2;
     width: 30%;
@@ -307,7 +307,6 @@ nav .listNavigation {
 #column .popularFrame a {
     display: flex;
     flex-direction: row;
-
 }
 
 .popularFrame a img {
@@ -339,7 +338,7 @@ nav .listNavigation {
     bottom: 0;
 }
 
-/* les activités */
+/* Section les activités */
 .activities {
     margin: 50px 0;
 }
@@ -403,16 +402,17 @@ footer div ul li {
 /* responsive tablette */
 @media screen and (min-width:769px) and (max-width: 991px) {
 
-    /* général */
+    /* Général */
     .container {
-        padding: 24px 24px 0 24px;
+        padding: 0 24px;
     }
-    main{
+
+    main {
         margin: 0;
     }
 
-    /* header */
-    header{
+    /* Header */
+    header {
         margin: 0;
     }
 
@@ -420,7 +420,7 @@ footer div ul li {
         width: 10%;
     }
 
-    /* barre de recherche */
+    /* Barre de recherche */
     #search form .searchText {
         width: 25%;
     }
@@ -429,18 +429,18 @@ footer div ul li {
         width: 15%;
     }
 
-    /* filtres de recherche */
+    /* Filtres de recherche */
     #search .filtersSection .filters {
         gap: 8px;
     }
 
-    /* section hotels */
+    /* Section hotels */
     .searchHotels {
         flex-direction: column;
         gap: 25px;
     }
 
-    /* hébergements */
+    /* Hébergements à Marseille*/
     .searchHotels .hotels {
         width: auto;
     }
@@ -453,7 +453,7 @@ footer div ul li {
         height: 100px;
     }
 
-    /* les plus populaires */
+    /* Les plus populaires */
     .searchHotels .popular {
         width: auto;
         height: 250px;
@@ -464,7 +464,6 @@ footer div ul li {
         flex-direction: row;
         justify-content: space-between;
         gap: 0;
-
     }
 
     #column .popularFrame {
@@ -479,7 +478,7 @@ footer div ul li {
         font-size: 13px;
     }
 
-    /* section activités */
+    /* Section les activités */
     .activities .containerActivities .activitiesFrame {
         height: 270px;
     }
@@ -488,7 +487,7 @@ footer div ul li {
         height: 205px;
     }
 
-    /* bas de page */
+    /* Bas de page */
     footer {
         margin: 0;
         padding: 20px 15px;
@@ -498,12 +497,12 @@ footer div ul li {
 /* responsive mobile */
 @media screen and (max-width: 768px) {
 
-    /* général */
+    /* Général */
     main {
         margin: 0
     }
 
-    /* header */
+    /* Header */
     header {
         margin: 20px 0;
         display: flex;
@@ -520,11 +519,13 @@ footer div ul li {
         width: 15%;
     }
 
+    /* La navigation */
     header .navigation {
         width: 100%;
     }
 
     header .navigation .listNavigation {
+        margin-top: 25px;
         width: 100%;
         display: flex;
         justify-content: space-around;
@@ -549,7 +550,7 @@ footer div ul li {
         padding: 20px 0;
     }
 
-    /* barre de recherche */
+    /* Barre de recherche */
     #search {
         margin: 0 15px;
     }
@@ -579,7 +580,7 @@ footer div ul li {
         font-size: 18px;
     }
 
-    /* filtres de recherche */
+    /* Filtres de recherche */
     #search .filtersSection {
         margin: 15px 0;
         display: flex;
@@ -603,13 +604,13 @@ footer div ul li {
         width: 38%;
     }
 
-    /* la section hotels */
+    /* La section hotels */
     .searchHotels {
         flex-direction: column-reverse;
         gap: 25px;
     }
 
-     /* Hébergements */
+    /* Hébergements à Marseille */
     .searchHotels .hotels {
         width: auto;
         margin: 0 20px;
@@ -641,7 +642,7 @@ footer div ul li {
         border-radius: 0;
     }
 
-    .popular .popularTitle{
+    .popular .popularTitle {
         margin: 0 15px;
     }
 
@@ -649,10 +650,11 @@ footer div ul li {
         width: 95%;
     }
 
-    /* activités */
-    .activities{
+    /* Section les activités */
+    .activities {
         margin: 50px 20px;
     }
+
     .activities .containerActivities {
         display: flex;
         flex-direction: column;
